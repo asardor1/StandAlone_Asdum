@@ -1,0 +1,1 @@
+{"uuid":"051d47d1-f459-4eea-8b5a-fa9b9d1271f1","name":"StandAlone_Asdum","children":["06546ae3-dc7f-4829-8db0-370a555bad0c"],"befores":[],"afters":[{"name":"clearCookiesAndLocalStorage","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1734765001457,"stop":1734765001685}],"start":1734765000279,"stop":1734765001685}
