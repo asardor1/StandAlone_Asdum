@@ -22,7 +22,8 @@ public class LoginPage extends BasePage {
         } else {
             System.out.println("Поле содержит текст: " + fieldValue);
         }
-        waitElementIsVisible(UserInput).sendKeys(username);
+        waitElementIsVisible(UserInput)
+                .sendKeys(username);
     }
     public void password(String password) {
         WebElement PassInput = driver.findElement(passwordField);
@@ -33,9 +34,18 @@ public class LoginPage extends BasePage {
         } else {
             System.out.println("Поле содержит текст: " + fieldValue2);
         }
-        waitElementIsVisible(PassInput).sendKeys(password);
+        waitElementIsVisible(PassInput)
+                .sendKeys(password);
     }
     public void entryBtn() {
+//        WebElement EnterButton = driver.findElement(enterBtn);
+//
+//        String fieldValue2 = EnterButton.getAttribute("data-disabled");
+//        if ("true".equals(dataDisabled)) {
+//            System.out.println("Button elementida data-disabled=\"true\" atributi mavjud.");
+//        } else {
+//            System.out.println("Button elementida data-disabled=\"true\" atributi mavjud emas.");
+//        }
         driver.findElement(enterBtn).click();
     }
 }

@@ -1,6 +1,7 @@
 package tests.Organizations;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,6 +17,7 @@ public class OrganizationsPage extends BaseTest {
     public void openSite() {
         basePage.open(ASDUM_LOGIN_PAGE);
     }
+
     @Test
     public void logInEntry() {
         loginPage.LoginData(usernameLogin);
@@ -23,12 +25,11 @@ public class OrganizationsPage extends BaseTest {
         loginPage.entryBtn();
         boolean logo = driver.findElement(By.className("_logoImg_1v3h4_37")).isDisplayed();
         Assert.assertTrue(logo);
-        System.out.println("Test from logInEntry is running!");
+        System.out.println("Test from logInEntry is successfully running!");
     }
 
     @Test
     public static void gotoManage() {
         ManageModule.GoToManage();
-        System.out.println("Test from gotoManageModule is running!");
     }
 }

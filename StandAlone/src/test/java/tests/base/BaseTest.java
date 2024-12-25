@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import pages.ManageModule.ManageModule;
 import pages.asdum_login.LoginPage;
 import pages.base.BasePage;
 
@@ -12,9 +13,10 @@ import static common.Config.CLEAR_COOKIES_AND_STORAGE;
 import static common.Config.HOLD_BROWSER_OPEN;
 
 public class BaseTest {
-    protected WebDriver driver = CommonActions.createDriver();
+    protected static WebDriver driver = CommonActions.createDriver();
     protected BasePage basePage = new BasePage(driver);
     protected LoginPage loginPage = new LoginPage(driver);
+    protected static ManageModule managemodule = new ManageModule(driver);
 
     @AfterTest
     public void clearCookiesAndLocalStorage() {

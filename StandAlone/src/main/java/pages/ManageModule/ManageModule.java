@@ -10,10 +10,14 @@ public class ManageModule extends BasePage {
         super(driver);
     }
 
-    private final By Manage = By.xpath("//*[text()='Управления']");
+    private static final By Manage = By
+            .xpath("/html/body/div[1]/div[1]/div[1]/div/nav/ul/a[4]/li");
 
-    public void GoToManage() {
+    public static void GoToManage() {
         WebElement ManageModule1 = driver.findElement(Manage);
-        waitElementIsVisible(ManageModule1).click();
+        waitElementIsVisible(ManageModule1)
+                .click();
+        System.out
+                .println("Test from gotoManage is running!");
     }
 }
