@@ -1,7 +1,6 @@
 package tests.Organizations;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,7 +22,8 @@ public class OrganizationsPage extends BaseTest {
         loginPage.LoginData(usernameLogin);
         loginPage.password(passwordLogin);
         loginPage.entryBtn();
-        boolean logo = driver.findElement(By.className("_logoImg_1v3h4_37")).isDisplayed();
+        boolean logo = driver.findElement(By.className("_logoImg_1v3h4_37"))
+                .isDisplayed();
         Assert.assertTrue(logo);
         System.out.println("Test from logInEntry is successfully running!");
     }
